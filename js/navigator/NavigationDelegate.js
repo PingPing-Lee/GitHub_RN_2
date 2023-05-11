@@ -27,7 +27,7 @@ export function tabNav({ Component, keys, theme, extra } = {}) {
           <Tab.Screen
             name={item[0]}
             key={item[0]}
-            component={item[1].screen}
+            component={item[1].Screen}
             options={item[1].navigationOptions}
           />
         );
@@ -41,7 +41,7 @@ function _genTabs({ Component, keys, theme, extra = {} } = {}) {
   keys.forEach((item, index) => {
     if (item.checked) {
       tabs[`tab${index}`] = {
-        screen: props => <Component {...props} {...extra} tabLabel={item.name} theme={theme} />, //初始化Component时携带默认参数 @https://github.com/react-navigation/react-navigation/issues/2392
+        Screen: props => <Component {...props} {...extra} tabLabel={item.name} theme={theme} />, //初始化Component时携带默认参数 @https://github.com/react-navigation/react-navigation/issues/2392
         navigationOptions: {
           title: item.name,
         },

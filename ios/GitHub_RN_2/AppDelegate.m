@@ -3,10 +3,12 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import <UMCommon/UMConfigure.h>
 #import "RNSplashScreen.h"  // here
 #import "RNUMConfigure.h"
 #import <UMShare/UMShare.h>
-#import "Constants.h"
+#import "./Constants.h"
+
 #ifdef FB_SONARKIT_ENABLED
 #import <FlipperKit/FlipperClient.h>
 #import <FlipperKitLayoutPlugin/FlipperKitLayoutPlugin.h>
@@ -60,10 +62,13 @@ static void InitializeFlipper(UIApplication *application) {
 {
 #if DEBUG
   return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
-#else
+#else //没有使用CodePush热更新的情况
+    // return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+  //如果在项目中使用了CodePush热更新，那么我们需要就可以直接通过CodePush来读取本地的jsbundle，方法如下： For React Native >=0.59,https://github.com/microsoft/react-native-code-push/blob/master/docs/setup-ios.md
   return [CodePush bundleURL];
 #endif
 }
+
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
   BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
@@ -72,6 +77,7 @@ static void InitializeFlipper(UIApplication *application) {
   }
   return result;
 }
+
 -(void)initUmeng{
   //UMeng 统计
   [UMConfigure setLogEnabled:YES];

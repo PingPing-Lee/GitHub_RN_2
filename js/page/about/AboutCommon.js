@@ -1,28 +1,39 @@
-import React from 'react';
-import { View, Text, Image, Dimensions, StyleSheet, Platform } from 'react-native';
+import React, { Component } from 'react';
+import {
+  View,
+  Text,
+  Image,
+  Dimensions,
+  StyleSheet,
+  Platform,
+  TouchableOpacity,
+} from 'react-native';
 import BackPressComponent from '../../component/BackPressComponent';
 import NavigationUtil from '../../navigator/NavigationUtil';
 import ParallaxScrollView from 'react-native-parallax-scroll-view';
 import GlobalStyles from '../../res/styles/GlobalStyles';
 import ViewUtil from '../../util/ViewUtil';
 
+import ImageCrop from '../../../ImageCrop';
+
 const THEME_COLOR = '#678';
 export const FLAG_ABOUT = { flag_about: 'about', flag_about_me: 'about_me' };
-export default class AboutCommon {
+
+export default class AboutCommon extends Component {
   constructor(props, updateState) {
-    this.props = props;
+    super(props);
     this.updateState = updateState;
     this.backPress = new BackPressComponent({ backPress: () => this.onBackPress() });
+    this.state = {
+      result: '',
+    };
   }
 
-  onBackPress() {
-    NavigationUtil.goBack(this.props.navigation);
-    return true;
-  }
+  async componentDidMount() {
+    console.log('123323123', 123321);
 
-  componentDidMount() {
     this.backPress.componentDidMount();
-    fetch('https://www.devio.org/io/GitHubPopular/json/github_app_config.json')
+    fetch('https://github.com/PingPing-Leeio/GitHubPopular/json/github_app_config.json')
       .then(response => {
         if (response.ok) {
           return response.json();
@@ -41,16 +52,50 @@ export default class AboutCommon {
       });
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    console.log(123, nextProps, prevState, this);
+    // if (prevState.keys !== CustomKeyPage._keys(nextProps, null, prevState)) {
+    //   return {
+    //     keys: CustomKeyPage._keys(nextProps, null, prevState),
+    //   };
+    // }
+    return nextProps;
+  }
+
   componentWillUnmount() {
     this.backPress.componentWillUnmount();
+  }
+
+  // 选择头像
+  onSelectCrop = () => {
+    console.log('ImageCrop', ImageCrop);
+    ImageCrop.selectWithCrop(parseInt(200), parseInt(200))
+      .then(result => {
+        const temp = result.imageUrl ? result.imageUrl : result;
+        let avatar = Platform.OS === 'android' ? 'file:///' + temp : temp;
+        console.log('result', result, avatar);
+        this.setState({ result: avatar }, () => console.log(this));
+      })
+      .catch(e => {
+        this.setState({ result: e });
+      });
+  };
+
+  onBackPress() {
+    NavigationUtil.goBack(this.props.navigation);
+    return true;
   }
 
   onShare() {}
 
   getParallaxRenderConfig(params) {
+    console.log('getParallaxRenderConfig', this);
+    const { userInfo } = this.props;
+    const { result } = this.state;
     let config = {};
-    let avatar = typeof params.avatar === 'string' ? { uri: params.avatar } : params.avatar;
-    console.log('params.avatar', avatar);
+    let avatar =
+      typeof userInfo.avatar === 'string' ? { uri: result || userInfo.avatar } : userInfo.avatar;
+    console.log(avatar, ':avatar，this.state:', this.state);
     config.renderBackground = () => (
       <View key="background">
         <Image
@@ -73,14 +118,16 @@ export default class AboutCommon {
     );
     config.renderForeground = () => (
       <View key="parallax-header" style={styles.parallaxHeader}>
-        <Image style={styles.avatar} source={avatar} />
-        <Text style={styles.sectionSpeakerText}>{params.name}</Text>
+        <TouchableOpacity onPress={() => this.onSelectCrop()}>
+          <Image style={styles.avatar} source={avatar} />
+        </TouchableOpacity>
+        <Text style={styles.sectionSpeakerText}>{userInfo.userName}</Text>
         <Text style={styles.sectionTitleText}>{params.description}</Text>
       </View>
     );
     config.renderStickyHeader = () => (
       <View key="sticky-header" style={styles.stickySection}>
-        <Text style={styles.stickySectionText}>{params.name}</Text>
+        <Text style={styles.stickySectionText}>{userInfo.userName}</Text>
       </View>
     );
     config.renderFixedHeader = () => (
@@ -93,7 +140,12 @@ export default class AboutCommon {
   }
 
   render(contentView, params) {
+    console.log(contentView, params, '123323133131');
     const renderConfig = this.getParallaxRenderConfig(params);
+    const { result } = this.state;
+    let imgUrl = Platform.OS === 'android' ? 'file:///' + result : result;
+    let imageView =
+      result === '' ? null : <Image style={{ height: 200, width: 200 }} source={{ uri: imgUrl }} />;
     return (
       <ParallaxScrollView
         backgroundColor={THEME_COLOR}
@@ -104,13 +156,14 @@ export default class AboutCommon {
         {...renderConfig}
       >
         {contentView}
+        {imageView}
       </ParallaxScrollView>
     );
   }
 }
 const window = Dimensions.get('window');
 const AVATAR_SIZE = 90;
-const PARALLAX_HEADER_HEIGHT = 270;
+const PARALLAX_HEADER_HEIGHT = 300;
 const STICKY_HEADER_HEIGHT =
   Platform.OS === 'ios'
     ? GlobalStyles.nav_bar_height_ios + 20
@@ -157,7 +210,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1,
     flexDirection: 'column',
-    paddingTop: 100,
+    paddingTop: 80,
   },
   avatar: {
     width: AVATAR_SIZE,

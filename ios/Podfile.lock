@@ -431,6 +431,42 @@ PODS:
     - React-Core
   - SocketRocket (0.6.0)
   - SSZipArchive (2.2.3)
+  - UMCommon (7.3.9):
+    - UMDevice
+  - UMCommonLog (1.0.0)
+  - UMDevice (3.1.0)
+  - UMShare/Core (6.10.7):
+    - UMCommon
+  - UMShare/Social/Email (6.10.7):
+    - UMCommon
+    - UMShare/Core
+  - UMShare/Social/QQ (6.10.7):
+    - UMCommon
+    - UMShare/Core
+    - UMShare/Social/ReducedQQ
+  - UMShare/Social/ReducedQQ (6.10.7):
+    - UMCommon
+    - UMShare/Core
+  - UMShare/Social/ReducedSina (6.10.7):
+    - UMCommon
+    - UMShare/Core
+  - UMShare/Social/ReducedWeChat (6.10.7):
+    - UMCommon
+    - UMShare/Core
+  - UMShare/Social/Sina (6.10.7):
+    - UMCommon
+    - UMShare/Core
+    - UMShare/Social/ReducedSina
+  - UMShare/Social/SMS (6.10.7):
+    - UMCommon
+    - UMShare/Core
+  - UMShare/Social/WeChat (6.10.7):
+    - UMCommon
+    - UMShare/Core
+    - UMShare/Social/ReducedWeChat
+  - UMShare/UI (6.10.7):
+    - UMCommon
+    - UMShare/Core
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -506,6 +542,16 @@ DEPENDENCIES:
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
+  - UMCommon
+  - UMCommonLog
+  - UMDevice
+  - UMShare/Social/Email
+  - UMShare/Social/QQ
+  - UMShare/Social/ReducedSina
+  - UMShare/Social/Sina
+  - UMShare/Social/SMS
+  - UMShare/Social/WeChat
+  - UMShare/UI
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -529,6 +575,10 @@ SPEC REPOS:
     - OpenSSL-Universal
     - SocketRocket
     - SSZipArchive
+    - UMCommon
+    - UMCommonLog
+    - UMDevice
+    - UMShare
     - YogaKit
 
 EXTERNAL SOURCES:
@@ -693,9 +743,13 @@ SPEC CHECKSUMS:
   RNVectorIcons: fcc2f6cb32f5735b586e66d14103a74ce6ad61f8
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
   SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
+  UMCommon: afcbd381039c051d6a9bea864159a09252080a33
+  UMCommonLog: f3741161dc46e9f56f050e5ca331043f58fe7d4f
+  UMDevice: 9ef8045b59e0479cff7062915c879a1af46fa094
+  UMShare: 8a1030a9793941d1129a82d5bc02cd97df5ae210
   Yoga: 79dd7410de6f8ad73a77c868d3d368843f0c93e0
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 73af321921e68599aa3a19756ec24184dfdc6e19
+PODFILE CHECKSUM: 88ae3aa9691effd24ee10f43ebc3756e9080599f
 
 COCOAPODS: 1.12.1

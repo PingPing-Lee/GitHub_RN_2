@@ -44,6 +44,34 @@ target 'GitHub_RN_2' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  #必须集成
+  pod 'UMCommon'
+  pod 'UMDevice'
+
+  # LOG 查找问题
+  pod 'UMCommonLog'
+
+  # U-Share SDK UI模块（分享面板，建议添加）
+  pod 'UMShare/UI'
+
+  #集成微信(完整版14.4M)
+  pod 'UMShare/Social/WeChat'
+
+  #集成QQ/QZone/TIM(完整版7.6M)
+  pod 'UMShare/Social/QQ'
+
+  #集成新浪微博(完整版25.3M)
+  pod 'UMShare/Social/Sina'
+
+  #集成新浪微博(精简版1M)
+  pod 'UMShare/Social/ReducedSina'
+
+  #集成邮件
+  pod 'UMShare/Social/Email'
+
+  #集成短信
+  pod 'UMShare/Social/SMS'
+
   target 'GitHub_RN_2Tests' do
     inherit! :complete
     # Pods for testing

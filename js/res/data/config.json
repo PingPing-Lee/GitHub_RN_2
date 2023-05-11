@@ -23,28 +23,16 @@
       ]
     },
     "Blog": {
-      "name": "技术博客",
+      "name": "我在这里",
       "icon": "ios-laptop",
       "items": [
         {
           "title": "个人博客",
-          "url": "https://www.devio.org"
-        },
-        {
-          "title": "CSDN",
-          "url": "https://blog.csdn.net/fengyuzhengfan"
-        },
-        {
-          "title": "简书",
-          "url": "https://www.jianshu.com/users/ca3943a4172a/latest_articles"
+          "url": "https://pingping-lee.github.io/"
         },
         {
           "title": "GitHub",
-          "url": "https://github.com/crazycodeboy"
-        },
-        {
-          "title": "慕课网",
-          "url": "https://www.imooc.com/u/4951150"
+          "url": "https://github.com/PingPing-Lee"
         }
       ]
     },
@@ -52,13 +40,13 @@
       "name": "联系方式",
       "icon": "ios-chatbox",
       "items": {
-        "QQ": {
-          "title": "QQ",
-          "account": "1586866509"
+        "Tel": {
+          "title": "Tel",
+          "account": "18005479154"
         },
         "Email": {
           "title": "Email",
-          "account": "crazycodeboy@gmail.com"
+          "account": "ping_muzi@163.com"
         }
       }
     },
@@ -78,21 +66,21 @@
     }
   },
   "info": {
-    "html_url": "https://github.com/crazycodeboy/",
-    "url": "https://api.github.com/repos/crazycodeboy/",
-    "currentRepoUrl": "https://api.github.com/repos/crazycodeboy/GitHubPopular"
+    "html_url": "https://github.com/PingPing-Lee",
+    "url": "https://github.com/PingPing-Lee",
+    "currentRepoUrl": "https://github.com/PingPing-Lee"
   },
   "author": {
-    "name": "CrazyCodeBoy",
+    "name": "平平李",
     "description": "专注于移动开发，分享知识，共享快乐。",
     "avatar": "https://avatar.csdn.net/1/1/E/1_fengyuzhengfan.jpg",
-    "backgroundImg": "https://www.devio.org/io/GitHubPopular/img/for_githubpopular_about_me.jpg",
-    "url": "https://www.devio.org/"
+    "backgroundImg": "https://github.com/PingPing-Leeio/GitHubPopular/img/for_githubpopular_about_me.jpg",
+    "url": "https://github.com/PingPing-Lee"
   },
   "app": {
     "name": "GitHub Popular",
     "description": "这是一个用来查看GitHub最受欢迎与最热项目的App,它基于React Native支持Android和iOS双平台。",
-    "avatar": "https://www.devio.org/io/GitHubPopular/img/ic_app.png",
-    "backgroundImg": "https://www.devio.org/io/GitHubPopular/img/for_githubpopular_about_me.jpg"
+    "avatar": "https://github.com/PingPing-Leeio/GitHubPopular/img/ic_app.png",
+    "backgroundImg": "https://github.com/PingPing-Leeio/GitHubPopular/img/for_githubpopular_about_me.jpg"
   }
 }

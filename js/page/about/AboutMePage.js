@@ -114,11 +114,6 @@ export default class AboutMePage extends Component {
         {this._item(this.state.data.aboutMe.Blog, this.state.showBlog, 'showBlog')}
         <View style={GlobalStyles.line} />
         {this.state.showBlog ? this.renderItems(this.state.data.aboutMe.Blog.items) : null}
-
-        {this._item(this.state.data.aboutMe.QQ, this.state.showQQ, 'showQQ')}
-        <View style={GlobalStyles.line} />
-        {this.state.showQQ ? this.renderItems(this.state.data.aboutMe.QQ.items, true) : null}
-
         {this._item(this.state.data.aboutMe.Contact, this.state.showContact, 'showContact')}
         <View style={GlobalStyles.line} />
         {this.state.showContact

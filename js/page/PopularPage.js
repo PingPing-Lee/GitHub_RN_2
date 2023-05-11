@@ -26,6 +26,7 @@ import { FLAG_LANGUAGE } from '../expand/dao/LanguageDao';
 import EventTypes from '../util/EventTypes';
 import { getStore } from '../util/StoreUtil';
 import FavoriteUtil from '../util/FavoriteUtil';
+import AnalyticsUtil from '../util/AnalyticsUtil';
 
 import { PopularItem, NavigationBar } from '../component';
 
@@ -39,20 +40,23 @@ class PopularPage extends Component {
     const { onLoadLanguage } = this.props;
     onLoadLanguage(FLAG_LANGUAGE.flag_key);
   }
-//   static getDerivedStateFromProps(nextProps, prevState) {
-//     console.log('getDerivedStateFromProps', nextProps, prevState);
-//     // if (prevState.keys !== CustomKeyPage._keys(nextProps, null, prevState)) {
-//     //   return {
-//     //     keys: CustomKeyPage._keys(nextProps, null, prevState),
-//     //   };
-//     // }
-//     return null;
-//   }
+  //   static getDerivedStateFromProps(nextProps, prevState) {
+  //     console.log('getDerivedStateFromProps', nextProps, prevState);
+  //     // if (prevState.keys !== CustomKeyPage._keys(nextProps, null, prevState)) {
+  //     //   return {
+  //     //     keys: CustomKeyPage._keys(nextProps, null, prevState),
+  //     //   };
+  //     // }
+  //     return null;
+  //   }
   renderRightButton() {
     const { theme } = this.props;
     return (
       <TouchableOpacity
         onPress={() => {
+          //新版本友盟SDK 时间统计方法由 track -> onEvent
+          AnalyticsUtil.onEvent('SearchButtonClick');
+          console.log(12323);
           NavigationUtil.goPage({ theme }, 'SearchPage');
         }}
       >
@@ -73,11 +77,11 @@ class PopularPage extends Component {
   render() {
     console.log('this.props', this.props);
     const { theme: { themeColor } = {}, keys, theme } = this.props;
-    if (this.themeColor !== themeColor) {
-      //当主题变更的时候需要以新的主题色来创建TabNavigator
-      this.themeColor = themeColor;
-      this.TabNavigator = null;
-    }
+    // if (this.themeColor !== themeColor) {
+    //   //当主题变更的时候需要以新的主题色来创建TabNavigator
+    //   this.themeColor = themeColor;
+    //   this.TabNavigator = null;
+    // }
     let statusBar = {
       backgroundColor: themeColor,
       barStyle: 'light-content',
@@ -93,9 +97,7 @@ class PopularPage extends Component {
     );
 
     //通过复用TabNavigator来防止导航器频繁的创建，提升渲染效率
-    this.TabNavigator = this.TabNavigator
-      ? this.TabNavigator
-      : keys.length
+    this.TabNavigator = keys.length
       ? tabNav({
           Component: PopularTabPage,
           //fix theme: { themeColor: themeColor }

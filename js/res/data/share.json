@@ -1,0 +1,20 @@
+{
+  "share_app": {
+    "title": "分享GitHub Popular",
+    "content": "GitHub最受欢迎的开源项目浏览神器",
+    "imgUrl": "https://avatars.githubusercontent.com/u/57704173?s=96&v=4",
+    "url": "https://github.com/PingPing-Lee"
+  },
+  "share_blog": {
+    "title": "分享平平李的技术博客",
+    "content": "关于前端技术 | 混合开发 | 这里是平平李的个人博客 ",
+    "imgUrl": "https://avatars.githubusercontent.com/u/57704173?s=96&v=4",
+    "url": "https://github.com/PingPing-Lee"
+  },
+  "share_repo": {
+    "title": "来自GitHub Popular的分享",
+    "content": "我在GitHub Popular发现开源项目",
+    "imgUrl": "https://avatars.githubusercontent.com/u/57704173?s=96&v=4",
+    "url": "https://github.com/PingPing-Lee"
+  }
+}

@@ -8,7 +8,7 @@ export default (props: any) => {
   const { navigation } = props;
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
-  const [msg, setMsg] = useState('Add');
+  const [msg, setMsg] = useState('');
   const [helpUrl, setHelpUrl] = useState('https://www.baidu.com/');
 
   const onLogin = () => {
@@ -28,7 +28,7 @@ export default (props: any) => {
       .catch((e: any) => {
         // const {code, data: {helpUrl=''} = {}, msg} = e;
         setMsg(e.msg);
-        setHelpUrl(e.data.helpUrl);
+        setHelpUrl(e?.data?.helpUrl);
       });
   };
   return (

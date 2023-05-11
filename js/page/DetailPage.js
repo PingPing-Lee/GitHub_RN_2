@@ -3,7 +3,10 @@ import { StyleSheet, TouchableOpacity, View, DeviceInfo, Platform } from 'react-
 import { WebView } from 'react-native-webview';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
+import shareData from '../res/data/share';
+
 import ViewUtil from '../util/ViewUtil';
+import ShareUtil from '../util/ShareUtil';
 import NavigationUtil from '../navigator/NavigationUtil';
 
 import FavoriteDao from '../expand/dao/FavoriteDao';
@@ -84,13 +87,24 @@ export default class Index extends Component {
             style={{ color: 'white', marginRight: 10 }}
           />
         </TouchableOpacity>
-        {ViewUtil.getShareButton(() => {})}
+        {ViewUtil.getShareButton(() => {
+          let shareApp = shareData.share_app;
+          ShareUtil.shareboard(
+            shareApp.content,
+            shareApp.imgUrl,
+            this.url,
+            shareApp.title,
+            [0, 1, 2, 3, 4, 5, 6],
+            (code, message) => {
+              console.log('result:' + code + message);
+            }
+          );
+        })}
       </View>
     );
   }
-  renderNavigationBar = () => {
+  renderNavigationBar = theme => {
     console.log('this.params', this.params);
-    const { theme } = this.params;
     const { title } = this.state;
     const titleLayoutStyle = title.length > 20 ? { paddingRight: 30 } : null;
     let statusBar = {
@@ -99,10 +113,10 @@ export default class Index extends Component {
     };
     return (
       <NavigationBar
+        title={title}
         statusBar={statusBar}
         leftButton={ViewUtil.getLeftBackButton(() => this.onBack())}
         titleLayoutStyle={titleLayoutStyle}
-        title={title}
         style={theme.styles.navBar}
         rightButton={this.renderRightButton()}
       />
@@ -110,11 +124,13 @@ export default class Index extends Component {
   };
 
   render() {
+    const { theme: { themeColor } = {}, theme } = this.params;
+
     return (
-      <SafeAreaViewPlus style={styles.container}>
-        {this.renderNavigationBar()}
+      <SafeAreaViewPlus style={[styles.container, { backgroundColor: themeColor }]}>
+        {this.renderNavigationBar(theme)}
         <WebView
-          ref={webView => this.webView = webView}
+          ref={webView => (this.webView = webView)}
           startInLoadingState={true}
           onNavigationStateChange={e => this.onNavigationStateChange(e)}
           source={{ uri: this.state.url }}
@@ -127,6 +143,5 @@ export default class Index extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: DeviceInfo.isIPhoneX_deprecated ? 30 : 0,
   },
 });

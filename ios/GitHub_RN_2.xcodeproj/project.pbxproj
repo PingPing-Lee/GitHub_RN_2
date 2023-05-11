@@ -11,11 +11,18 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1A8843E5AEF78C153E9B53BA /* libPods-GitHub_RN_2-GitHub_RN_2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA56F4925418604CB00622B /* libPods-GitHub_RN_2-GitHub_RN_2Tests.a */; };
-		34997047CAA367C1395DD7AB /* libPods-GitHub_RN_2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB4E6922137BCA66C144A56 /* libPods-GitHub_RN_2.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		A6161DFA29E1663D00E1BB0F /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = A6161DF829E1663D00E1BB0F /* main.jsbundle */; };
-		A6161DFB29E1663D00E1BB0F /* assets in Resources */ = {isa = PBXBuildFile; fileRef = A6161DF929E1663D00E1BB0F /* assets */; };
+		3AB4ED7DD204ADB1CC68E200 /* libPods-GitHub_RN_2-GitHub_RN_2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB86284D3507BE6FAC752190 /* libPods-GitHub_RN_2-GitHub_RN_2Tests.a */; };
+		ADFEDDF45BAB5A277BF2005C /* libPods-GitHub_RN_2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC112D526086FB2A8B922A88 /* libPods-GitHub_RN_2.a */; };
+		EE4362122A093BFF008DB787 /* ImageCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4362112A093BFF008DB787 /* ImageCrop.m */; };
+		EE4362152A093C0F008DB787 /* Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4362142A093C0F008DB787 /* Crop.m */; };
+		EE51FBBE2A0A463300AC4FAD /* RNUMConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = EE51FBBD2A0A463300AC4FAD /* RNUMConfigure.m */; };
+		EE51FBC32A0A49B200AC4FAD /* UMAnalyticsModule.m in Sources */ = {isa = PBXBuildFile; fileRef = EE51FBC02A0A49B200AC4FAD /* UMAnalyticsModule.m */; };
+		EE51FBC42A0A49B200AC4FAD /* UMShareModule.m in Sources */ = {isa = PBXBuildFile; fileRef = EE51FBC22A0A49B200AC4FAD /* UMShareModule.m */; };
+		EE61D9CF2A0A3EC0004340DF /* trackshare in Resources */ = {isa = PBXBuildFile; fileRef = EE61D9CE2A0A3EC0004340DF /* trackshare */; };
+		EE92CF3E2A08DFB800C9B914 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = EE92CF3D2A08DFB700C9B914 /* assets */; };
+		EE92CF402A08DFBD00C9B914 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = EE92CF3F2A08DFBD00C9B914 /* main.jsbundle */; };
+		EEAFCC552A0BDB9A00BFFD60 /* Startup.png in Resources */ = {isa = PBXBuildFile; fileRef = EEAFCC542A0BDB9A00BFFD60 /* Startup.png */; };
+		EEFE27FA2A0BD2A300BF5FDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEFE27F92A0BD2A300BF5FDD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,16 +45,31 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GitHub_RN_2/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GitHub_RN_2/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GitHub_RN_2/main.m; sourceTree = "<group>"; };
+		3F93B490A33331E0ADE25457 /* Pods-GitHub_RN_2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub_RN_2Tests.release.xcconfig"; path = "Target Support Files/Pods-GitHub_RN_2Tests/Pods-GitHub_RN_2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4C5E0FE2378224B6483BA666 /* Pods-GitHub_RN_2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub_RN_2.release.xcconfig"; path = "Target Support Files/Pods-GitHub_RN_2/Pods-GitHub_RN_2.release.xcconfig"; sourceTree = "<group>"; };
 		4F338D75C71D02A67C748D31 /* Pods-GitHub_RN_2-GitHub_RN_2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub_RN_2-GitHub_RN_2Tests.debug.xcconfig"; path = "Target Support Files/Pods-GitHub_RN_2-GitHub_RN_2Tests/Pods-GitHub_RN_2-GitHub_RN_2Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		7BA56F4925418604CB00622B /* libPods-GitHub_RN_2-GitHub_RN_2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHub_RN_2-GitHub_RN_2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = GitHub_RN_2/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A6161DF829E1663D00E1BB0F /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		A6161DF929E1663D00E1BB0F /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		CC112D526086FB2A8B922A88 /* libPods-GitHub_RN_2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHub_RN_2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D64268497FB4BEA75DF00C9A /* Pods-GitHub_RN_2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub_RN_2Tests.debug.xcconfig"; path = "Target Support Files/Pods-GitHub_RN_2Tests/Pods-GitHub_RN_2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E39254CA35638531A1F0AB89 /* Pods-GitHub_RN_2-GitHub_RN_2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub_RN_2-GitHub_RN_2Tests.release.xcconfig"; path = "Target Support Files/Pods-GitHub_RN_2-GitHub_RN_2Tests/Pods-GitHub_RN_2-GitHub_RN_2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		EFB4E6922137BCA66C144A56 /* libPods-GitHub_RN_2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHub_RN_2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4362102A093BF9008DB787 /* ImageCrop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCrop.h; sourceTree = "<group>"; };
+		EE4362112A093BFF008DB787 /* ImageCrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCrop.m; sourceTree = "<group>"; };
+		EE4362132A093C0A008DB787 /* Crop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Crop.h; sourceTree = "<group>"; };
+		EE4362142A093C0F008DB787 /* Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Crop.m; sourceTree = "<group>"; };
+		EE51FBBB2A0A44A100AC4FAD /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = GitHub_RN_2/Constants.h; sourceTree = "<group>"; };
+		EE51FBBC2A0A452400AC4FAD /* RNUMConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RNUMConfigure.h; path = trackshare/RNUMConfigure.h; sourceTree = "<group>"; };
+		EE51FBBD2A0A463300AC4FAD /* RNUMConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNUMConfigure.m; path = trackshare/RNUMConfigure.m; sourceTree = "<group>"; };
+		EE51FBBF2A0A49B100AC4FAD /* UMAnalyticsModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UMAnalyticsModule.h; path = trackshare/UMAnalyticsModule.h; sourceTree = "<group>"; };
+		EE51FBC02A0A49B200AC4FAD /* UMAnalyticsModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UMAnalyticsModule.m; path = trackshare/UMAnalyticsModule.m; sourceTree = "<group>"; };
+		EE51FBC12A0A49B200AC4FAD /* UMShareModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UMShareModule.h; path = trackshare/UMShareModule.h; sourceTree = "<group>"; };
+		EE51FBC22A0A49B200AC4FAD /* UMShareModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UMShareModule.m; path = trackshare/UMShareModule.m; sourceTree = "<group>"; };
+		EE61D9CE2A0A3EC0004340DF /* trackshare */ = {isa = PBXFileReference; lastKnownFileType = folder; path = trackshare; sourceTree = "<group>"; };
+		EE92CF3D2A08DFB700C9B914 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../bundles/assets; sourceTree = "<group>"; };
+		EE92CF3F2A08DFBD00C9B914 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = ../bundles/main.jsbundle; sourceTree = "<group>"; };
+		EEAFCC542A0BDB9A00BFFD60 /* Startup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Startup.png; sourceTree = "<group>"; };
+		EEFE27F92A0BD2A300BF5FDD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = GitHub_RN_2/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F363DD8A680AE85F04705F0B /* Pods-GitHub_RN_2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub_RN_2.debug.xcconfig"; path = "Target Support Files/Pods-GitHub_RN_2/Pods-GitHub_RN_2.debug.xcconfig"; sourceTree = "<group>"; };
+		FB86284D3507BE6FAC752190 /* libPods-GitHub_RN_2-GitHub_RN_2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHub_RN_2-GitHub_RN_2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A8843E5AEF78C153E9B53BA /* libPods-GitHub_RN_2-GitHub_RN_2Tests.a in Frameworks */,
+				3AB4ED7DD204ADB1CC68E200 /* libPods-GitHub_RN_2-GitHub_RN_2Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34997047CAA367C1395DD7AB /* libPods-GitHub_RN_2.a in Frameworks */,
+				ADFEDDF45BAB5A277BF2005C /* libPods-GitHub_RN_2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,14 +112,27 @@
 		13B07FAE1A68108700A75B9A /* GitHub_RN_2 */ = {
 			isa = PBXGroup;
 			children = (
-				A6161DF929E1663D00E1BB0F /* assets */,
-				A6161DF829E1663D00E1BB0F /* main.jsbundle */,
+				EEAFCC542A0BDB9A00BFFD60 /* Startup.png */,
+				EE51FBBF2A0A49B100AC4FAD /* UMAnalyticsModule.h */,
+				EE51FBC02A0A49B200AC4FAD /* UMAnalyticsModule.m */,
+				EE51FBC12A0A49B200AC4FAD /* UMShareModule.h */,
+				EE51FBC22A0A49B200AC4FAD /* UMShareModule.m */,
+				EE51FBBC2A0A452400AC4FAD /* RNUMConfigure.h */,
+				EE51FBBD2A0A463300AC4FAD /* RNUMConfigure.m */,
+				EE51FBBB2A0A44A100AC4FAD /* Constants.h */,
+				EE61D9CE2A0A3EC0004340DF /* trackshare */,
+				EE4362142A093C0F008DB787 /* Crop.m */,
+				EE4362132A093C0A008DB787 /* Crop.h */,
+				EE4362112A093BFF008DB787 /* ImageCrop.m */,
+				EE4362102A093BF9008DB787 /* ImageCrop.h */,
+				EE92CF3D2A08DFB700C9B914 /* assets */,
+				EE92CF3F2A08DFBD00C9B914 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				EEFE27F92A0BD2A300BF5FDD /* LaunchScreen.storyboard */,
 			);
 			name = GitHub_RN_2;
 			sourceTree = "<group>";
@@ -106,8 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				EFB4E6922137BCA66C144A56 /* libPods-GitHub_RN_2.a */,
-				7BA56F4925418604CB00622B /* libPods-GitHub_RN_2-GitHub_RN_2Tests.a */,
+				CC112D526086FB2A8B922A88 /* libPods-GitHub_RN_2.a */,
+				FB86284D3507BE6FAC752190 /* libPods-GitHub_RN_2-GitHub_RN_2Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,6 +185,8 @@
 				4C5E0FE2378224B6483BA666 /* Pods-GitHub_RN_2.release.xcconfig */,
 				4F338D75C71D02A67C748D31 /* Pods-GitHub_RN_2-GitHub_RN_2Tests.debug.xcconfig */,
 				E39254CA35638531A1F0AB89 /* Pods-GitHub_RN_2-GitHub_RN_2Tests.release.xcconfig */,
+				D64268497FB4BEA75DF00C9A /* Pods-GitHub_RN_2Tests.debug.xcconfig */,
+				3F93B490A33331E0ADE25457 /* Pods-GitHub_RN_2Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -165,8 +202,8 @@
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				91A0B4A342E8A918C6C86CDF /* [CP] Embed Pods Frameworks */,
-				F4860541C7D80A053BF69E39 /* [CP] Copy Pods Resources */,
+				9AE91BA3EC1031750EC11EAF /* [CP] Embed Pods Frameworks */,
+				4160858F0DB2C9690068D6D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,8 +225,8 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				305F2C545C559EC138E9DE7B /* [CP] Embed Pods Frameworks */,
-				CD5D206844DEE2F3E87DB02E /* [CP] Copy Pods Resources */,
+				8352A0A10DAB44BDC0CFFD39 /* [CP] Embed Pods Frameworks */,
+				ED677F2A0EB22A4C77C209C0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,9 +285,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6161DFA29E1663D00E1BB0F /* main.jsbundle in Resources */,
-				A6161DFB29E1663D00E1BB0F /* assets in Resources */,
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				EE61D9CF2A0A3EC0004340DF /* trackshare in Resources */,
+				EEAFCC552A0BDB9A00BFFD60 /* Startup.png in Resources */,
+				EE92CF3E2A08DFB800C9B914 /* assets in Resources */,
+				EEFE27FA2A0BD2A300BF5FDD /* LaunchScreen.storyboard in Resources */,
+				EE92CF402A08DFBD00C9B914 /* main.jsbundle in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,23 +335,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		305F2C545C559EC138E9DE7B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GitHub_RN_2/Pods-GitHub_RN_2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GitHub_RN_2/Pods-GitHub_RN_2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitHub_RN_2/Pods-GitHub_RN_2-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		37D163209CF75766063E7E2A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,7 +357,41 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		91A0B4A342E8A918C6C86CDF /* [CP] Embed Pods Frameworks */ = {
+		4160858F0DB2C9690068D6D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHub_RN_2-GitHub_RN_2Tests/Pods-GitHub_RN_2-GitHub_RN_2Tests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHub_RN_2-GitHub_RN_2Tests/Pods-GitHub_RN_2-GitHub_RN_2Tests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitHub_RN_2-GitHub_RN_2Tests/Pods-GitHub_RN_2-GitHub_RN_2Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8352A0A10DAB44BDC0CFFD39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHub_RN_2/Pods-GitHub_RN_2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHub_RN_2/Pods-GitHub_RN_2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitHub_RN_2/Pods-GitHub_RN_2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AE91BA3EC1031750EC11EAF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,7 +408,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitHub_RN_2-GitHub_RN_2Tests/Pods-GitHub_RN_2-GitHub_RN_2Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CD5D206844DEE2F3E87DB02E /* [CP] Copy Pods Resources */ = {
+		ED677F2A0EB22A4C77C209C0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,23 +423,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitHub_RN_2/Pods-GitHub_RN_2-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F4860541C7D80A053BF69E39 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GitHub_RN_2-GitHub_RN_2Tests/Pods-GitHub_RN_2-GitHub_RN_2Tests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GitHub_RN_2-GitHub_RN_2Tests/Pods-GitHub_RN_2-GitHub_RN_2Tests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitHub_RN_2-GitHub_RN_2Tests/Pods-GitHub_RN_2-GitHub_RN_2Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -421,6 +460,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				EE51FBC42A0A49B200AC4FAD /* UMShareModule.m in Sources */,
+				EE4362152A093C0F008DB787 /* Crop.m in Sources */,
+				EE51FBC32A0A49B200AC4FAD /* UMAnalyticsModule.m in Sources */,
+				EE51FBBE2A0A463300AC4FAD /* RNUMConfigure.m in Sources */,
+				EE4362122A093BFF008DB787 /* ImageCrop.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +538,7 @@
 			baseConfigurationReference = F363DD8A680AE85F04705F0B /* Pods-GitHub_RN_2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MYQW6D74VM;
@@ -523,6 +568,7 @@
 			baseConfigurationReference = 4C5E0FE2378224B6483BA666 /* Pods-GitHub_RN_2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MYQW6D74VM;

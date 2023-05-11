@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { connect } from 'react-redux';
 
@@ -10,21 +10,35 @@ import ViewUtil from '../util/ViewUtil';
 import { MORE_MENU } from '../util/MORE_MENU';
 import NavigationUtil from '../navigator/NavigationUtil';
 import { FLAG_LANGUAGE } from '../expand/dao/LanguageDao';
+import { getUserInfo } from '../util/BoardingUtil';
+
+import LoginDao from '../expand/dao/LoginDao';
 
 import { NavigationBar } from '../component';
 
 class MyPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userInfo: {},
+    };
+  }
+  async componentDidMount() {
+    const userInfo = await getUserInfo();
+    console.log('userInfo', userInfo);
+    this.setState({ userInfo: JSON.parse(userInfo) });
+  }
+  onLogOut() {
+    console.log('LoginDao', LoginDao)
+    LoginDao.getInstance().logOut();
+  }
   onClick(menu) {
     let RouteName,
       params = {};
     switch (menu) {
-      case MORE_MENU.Tutorial:
-        RouteName = 'WebViewPage';
-        params.title = '教程';
-        params.url = 'https://coding.m.imooc.com/classindex.html?cid=89';
-        break;
       case MORE_MENU.About:
         RouteName = 'AboutPage';
+        params.userInfo = this.state.userInfo;
         break;
       case MORE_MENU.Custom_Theme:
         const { onShowCustomThemeView } = this.props;
@@ -41,9 +55,9 @@ class MyPage extends Component {
       case MORE_MENU.About_Author:
         RouteName = 'AboutMePage';
         break;
-    }
-    if (RouteName) {
-      NavigationUtil.goPage(params, RouteName);
+      case MORE_MENU.LogOut:
+        this.onLogOut();
+        break;
     }
     if (RouteName) {
       NavigationUtil.goPage(params, RouteName);
@@ -55,6 +69,8 @@ class MyPage extends Component {
   }
 
   render() {
+    const { userInfo } = this.state;
+    console.log('userInfo', userInfo)
     const { theme } = this.props;
     const { themeColor } = theme;
     let statusBar = {
@@ -70,12 +86,13 @@ class MyPage extends Component {
         <ScrollView>
           <TouchableOpacity style={styles.item} onPress={() => this.onClick(MORE_MENU.About)}>
             <View style={styles.about_left}>
-              <Ionicons
+              {/* <Ionicons
                 name={MORE_MENU.About.icon}
                 size={40}
                 style={{ marginRight: 10, color: themeColor }}
-              />
-              <Text>GitHub Popular</Text>
+              /> */}
+              <Image source={{ uri: userInfo.avatar }} style={styles.avatar} />
+              <Text>{userInfo.userName}</Text>
             </View>
             <Ionicons
               name={'ios-arrow-forward'}
@@ -87,8 +104,6 @@ class MyPage extends Component {
               }}
             />
           </TouchableOpacity>
-          <View style={GlobalStyles.line} />
-          {this.getItem(MORE_MENU.Tutorial)}
           {/*趋势管理*/}
           <Text style={styles.groupTitle}>趋势管理</Text>
           {/*自定义语言*/}
@@ -114,10 +129,13 @@ class MyPage extends Component {
           {this.getItem(MORE_MENU.Custom_Theme)}
           {/*关于作者*/}
           <View style={GlobalStyles.line} />
-          {this.getItem(MORE_MENU.About_Author)}
+          {/* {this.getItem(MORE_MENU.About_Author)} */}
+          {this.getItem(MORE_MENU.LogOut)}
           <View style={GlobalStyles.line} />
           {/*反馈*/}
-          {this.getItem(MORE_MENU.Feedback)}
+          {/* {this.getItem(MORE_MENU.Feedback)} */}
+          {/* <View style={GlobalStyles.line} /> */}
+
         </ScrollView>
       </View>
     );
@@ -155,5 +173,11 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     fontSize: 12,
     color: 'gray',
+  },
+  avatar: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    marginRight: 10,
   },
 });

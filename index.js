@@ -5,14 +5,7 @@ import 'react-native-gesture-handler';
 import { AppRegistry, LogBox } from 'react-native';
 import App from './js/App';
 import { name as appName } from './app.json';
-import AsyncStorageDemoPage from './js/AsyncStorageDemoPage';
-import FetchDemoPage from './js/FetchDemoPage';
-import LoginPage from './js/page/LoginPage';
-import RegisterPage from './js/page/RegistrationPage';
-import AppNavigators from './js/navigator/AppNavigators';
 
 LogBox.ignoreLogs(['ViewPropTypes will be removed', 'ColorPropType will be removed']);
 
 AppRegistry.registerComponent(appName, () => App);
-
-

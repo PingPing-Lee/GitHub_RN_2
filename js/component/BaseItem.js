@@ -50,7 +50,6 @@ export default class BaseItem extends Component {
   }
   _favoriteIcon() {
     const { theme = {} } = this.props;
-    console.log('base item ', this.props);
     return (
       <TouchableOpacity
         style={{ padding: 6 }}

@@ -1,6 +1,8 @@
-import { saveBoarding } from '../../util/BoardingUtil';
+import { saveBoarding, saveUserInfo } from '../../util/BoardingUtil';
 import Constants from './Constants';
 import { post } from './HiNet';
+
+import NavigationUtil from '../../navigator/NavigationUtil';
 
 /**
  * 登陆模块相关网络服务
@@ -30,10 +32,12 @@ export default class LoginDao {
       formData.append('password', password);
       post(api)(formData)()
         .then((result: any) => {
-          const { code, data, msg } = result;
+          const { code, data, msg, extra = {} } = result;
           if (code === 0) {
             saveBoarding(data);
             resolve(data || msg);
+            // 保存用户的信息
+            saveUserInfo(JSON.stringify(extra));
           } else {
             reject(result);
           }
@@ -77,5 +81,13 @@ export default class LoginDao {
           reject({ code: -1, msg: '哎呀出错了' });
         });
     });
+  }
+
+  /**
+   * 退出登陆
+   */
+  logOut() {
+    saveBoarding('');
+    NavigationUtil.login();
   }
 }
